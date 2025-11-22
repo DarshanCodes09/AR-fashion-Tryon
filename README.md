@@ -97,19 +97,19 @@ Allow camera permissions.
 
 ## 🛠️ Development Roadmap
 
-### Phase 1: Foundation (Weeks 1–2) ✅
+### Phase 1: Foundation (Month 1–2) ✅
 - [x] React + Vite Setup
 - [ ] Tailwind Integration
 - [ ] Product Listing Page
 - [ ] Product Detail Page
 - [ ] Basic Camera Feed
 
-### Phase 2: Core Try-On (Weeks 3–4) 🔄
+### Phase 2: Core Try-On (Month 3–4) 🔄
 - [ ] T-shirt Overlay
 - [ ] Manual Adjustment UI
 - [ ] Mobile Optimization
 
-### Phase 3: AI Size Fit Engine (Weeks 5–7) 🔄
+### Phase 3: AI Size Fit Engine (Month 5–7) 🔄
 - [ ] Height/Weight Input
 - [ ] MediaPipe Pose Integration
 - [ ] Shoulder Measurement
@@ -123,7 +123,7 @@ Allow camera permissions.
 - [ ] Pose Stabilization
 - [ ] Upper Body Segmentation
 
-### Phase 5: E-Commerce Integration (Weeks 10–12) 📋
+### Phase 5: E-Commerce Integration (Month 10–12) 📋
 - [ ] Wishlist
 - [ ] Cart
 - [ ] Razorpay/Stripe Payment
