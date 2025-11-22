@@ -1,31 +1,36 @@
 # AR-fashion-Tryon
-# Step In - AR Indoor Navigation 🧭
+# Snitchify AR – Virtual Try-On Fashion Platform 👕✨
 
-> **Revolutionizing indoor navigation through augmented reality**
+> **Smart fashion shopping through augmented reality & AI — Try before you buy**
 
-Step In is a cutting-edge AR indoor navigation solution designed for multi-level buildings like malls, corporate offices, hospitals, and universities. Using advanced computer vision and SLAM technology, we provide seamless, camera-based navigation that guides users through complex indoor environments with intuitive AR overlays.
+Snitchify AR is a next-generation browser-based AR virtual try-on solution designed for fashion e-commerce. Using MediaPipe pose detection, real-time camera tracking, and AI-powered clothing size prediction, users can try T-shirts and streetwear instantly without downloading an app.
 
 ---
 
 ## 🌟 Features
 
-### Core Navigation
-- **Camera-based AR Navigation** - Real-time path visualization with 3D arrows and overlays
-- **Multi-floor Support** - Seamless navigation across different building levels
-- **Turn-by-turn Guidance** - Voice and visual directions with distance indicators
-- **Offline Capability** - Navigate without internet connectivity using cached maps
+### 👕 Core Virtual Try-On
+- Camera-based AR try-on using laptop or smartphone
+- Manual scaling and repositioning of T-shirt overlays
+- High-resolution PNG/WebP garment templates
+- Quick switching between designs
+- Works on mobile & desktop browsers
 
-### Advanced Technology
-- **Markerless SLAM** - Natural feature tracking without requiring physical markers
-- **Visual Positioning Service (VPS)** - Centimeter-accurate indoor localization
-- **Sensor Fusion** - Combined camera, IMU, and magnetometer data for enhanced accuracy
-- **Real-time Mapping** - Dynamic environment understanding and obstacle detection
+### 🤖 AI Size & Fit Engine
+- Height & weight estimation
+- MediaPipe Pose body tracking
+- Shoulder & chest measurement using landmarks
+- Pixel-to-centimeter conversion
+- Fit types: Oversized, Regular, Slim
+- Confidence score based on pose detection stability
+- Size recommendation displayed on product + AR page
 
-### User Experience
-- **Intuitive Interface** - Simple destination selection and route planning
-- **Accessibility Features** - Voice guidance and high-contrast visual modes
-- **Cross-platform** - Unified experience across iOS and Android devices
-- **Social Integration** - Location sharing and crowd-sourced POI updates
+### 🔬 Advanced AR Technology (Planned)
+- Shoulder auto-alignment
+- Auto garment scaling
+- Occlusion handling
+- Upper-body segmentation
+- Markerless tracking improvements
 
 ---
 
@@ -33,25 +38,25 @@ Step In is a cutting-edge AR indoor navigation solution designed for multi-level
 
 ### Frontend Stack
 ```
-Unity 3D + AR Foundation
-├── ARKit (iOS)
-├── ARCore (Android)
-├── C# Core Logic
-└── Cross-platform UI
+React / Next.js
+├── Tailwind CSS
+├── React Router
+├── Zustand / Redux
+└── HTML5 Camera API + Canvas Rendering
 ```
 
-### Backend Infrastructure
+### AR & Computer Vision Pipeline
 ```
-Cloud Services
-├── Firebase/AWS
-├── RESTful APIs
-├── Real-time Database
-└── 3D Mapping Pipeline
+Camera → MediaPipe Pose → Body Measurement → Overlay Rendering → AR UI
 ```
 
-### Computer Vision Pipeline
+### Backend Infrastructure (Future)
 ```
-Camera Input → SLAM → Feature Detection → 3D Tracking → AR Rendering
+Firebase / Node.js
+├── Product Database
+├── Size Chart DB
+├── User Accounts
+└── Order History
 ```
 
 ---
@@ -59,132 +64,145 @@ Camera Input → SLAM → Feature Detection → 3D Tracking → AR Rendering
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Unity 2022.3 LTS or later
-- AR Foundation 5.0+
-- iOS 12+ (for ARKit) or Android 7.0+ (for ARCore)
-- Xcode 14+ (for iOS builds)
-- Android SDK API Level 24+ (for Android builds)
+- Node.js 18+
+- npm / yarn
+- Camera-enabled device
+- Chrome / Safari / Edge browser
 
 ### Installation
-
-1. **Clone the repository**
 ```bash
-   git clone https://github.com/your-org/step-in-ar-navigation.git
-   cd step-in-ar-navigation
+git clone https://github.com/your-username/ar-fashion-tryon.git
+cd ar-fashion-tryon
+npm install
+npm run dev
 ```
 
-2. **Open in Unity**
-   - Launch Unity Hub
-   - Click "Open" and select the project folder
-   - Wait for Unity to import all packages
+Open in browser:
+🔥 **http://localhost:5173/**
 
-3. **Configure Platform Settings**
-   
-   **For iOS:**
-```bash
-   # Switch to iOS platform in Unity
-   # Set Bundle Identifier in Player Settings
-   # Enable ARKit in XR Plug-in Management
-```
-   
-   **For Android:**
-```bash
-   # Switch to Android platform in Unity
-   # Set Package Name in Player Settings
-   # Enable ARCore in XR Plug-in Management
-```
-
-4. **Build and Deploy**
-```bash
-   # For iOS: Build to Xcode project, then deploy via Xcode
-   # For Android: Build APK directly or via Android Studio
-```
+Allow camera permissions.
 
 ---
 
 ## 📱 Platform Support
 
-| Platform | Version | AR Framework | Status |
-|----------|---------|--------------|--------|
-| iOS | 12.0+ | ARKit | ✅ Supported |
-| Android | 7.0+ (API 24) | ARCore | ✅ Supported |
-| HoloLens | 2 | Mixed Reality Toolkit | 🔄 Planned |
+| Platform | AR Support | Status |
+|----------|-----------|--------|
+| Chrome (Desktop) | getUserMedia | ✅ Supported |
+| Android Chrome | Camera API | ✅ Supported |
+| Safari iOS | WebKit Camera | ⚠️ Optimizing |
+| PWA Version | WebAR | 🔄 Planned |
 
 ---
 
 ## 🛠️ Development Roadmap
 
-### Phase 1: Foundation (Months 1-3) ✅
-- [x] Basic AR capabilities with Unity AR Foundation
-- [ ] Marker-based indoor positioning
-- [ ] Simple UI for destination selection
-- [ ] Single-floor navigation proof-of-concept
+### Phase 1: Foundation (Weeks 1–2) ✅
+- [x] React + Vite Setup
+- [ ] Tailwind Integration
+- [ ] Product Listing Page
+- [ ] Product Detail Page
+- [ ] Basic Camera Feed
 
-### Phase 2: Core Navigation (Months 4-6) 🔄
-- [ ] SLAM-based markerless tracking
-- [ ] Multi-floor navigation system
-- [ ] Sensor fusion integration
-- [ ] Turn-by-turn AR guidance
+### Phase 2: Core Try-On (Weeks 3–4) 🔄
+- [ ] T-shirt Overlay
+- [ ] Manual Adjustment UI
+- [ ] Mobile Optimization
 
-### Phase 3: Production Ready (Months 7-9) 📋
-- [ ] Cloud-based mapping infrastructure
-- [ ] Performance optimization
-- [ ] Advanced pathfinding algorithms
-- [ ] Accessibility features
+### Phase 3: AI Size Fit Engine (Weeks 5–7) 🔄
+- [ ] Height/Weight Input
+- [ ] MediaPipe Pose Integration
+- [ ] Shoulder Measurement
+- [ ] Pixel-to-CM Conversion
+- [ ] Size Mapping
+- [ ] Fit Recommendation Display
 
-### Phase 4: Market Launch (Months 10-12) 📋
-- [ ] Enterprise dashboard
-- [ ] Analytics platform
-- [ ] White-label solutions
-- [ ] Monetization features
+### Phase 4: Smart AR (Weeks 8–10) 📋
+- [ ] Auto-fit Clothing
+- [ ] Auto-scaling
+- [ ] Pose Stabilization
+- [ ] Upper Body Segmentation
+
+### Phase 5: E-Commerce Integration (Weeks 10–12) 📋
+- [ ] Wishlist
+- [ ] Cart
+- [ ] Razorpay/Stripe Payment
+- [ ] Login / Auth
+- [ ] Order History
+
+### Phase 6: Market Launch (Future) 📋
+- [ ] Brand Dashboard
+- [ ] Try-On Analytics
+- [ ] White-label AR Widget
+- [ ] Monetization Features
 
 ---
 
 ## 🔧 Technical Implementation
 
-### SLAM Algorithm
-Our proprietary SLAM implementation combines:
-- **Visual odometry** for real-time camera tracking
-- **Loop closure detection** for drift correction
-- **Bundle adjustment** for optimized pose estimation
-- **Map persistence** for consistent relocalization
+### Body Measurement Landmarks
+```
+Shoulder Left  → landmark[11]
+Shoulder Right → landmark[12]
+Chest Points   → landmark[23], landmark[24]
+```
 
-### Navigation System
-- **A* pathfinding** for optimal route calculation
-- **Dynamic re-routing** based on real-time obstacles
-- **Multi-modal transport** (walking, elevators, stairs)
-- **Accessibility routing** for wheelchair users
+### Size Calculation
+```
+pixelWidth = distance(shoulderLeft, shoulderRight)
+realShoulderCM = pixelWidth × cmPerPixel
+```
+
+### Size Rules
+```
+< 44 cm  → Medium (M)
+44–47 cm → Large (L)
+47–50 cm → XL
+```
+
+### Fit Adjustments
+- **Oversized**: +4–6 cm
+- **Regular**: +1–2 cm
+- **Slim**: –1–2 cm
 
 ---
 
 ## 🎯 Market Opportunity
 
-The global indoor location services market is projected to reach **$55 billion by 2030**, with key applications in:
+The virtual try-on market is expected to exceed **$20B by 2030**.
 
-- **Retail & Malls** - Enhanced shopping experiences
-- **Corporate Offices** - Employee and visitor navigation
-- **Healthcare** - Patient and staff wayfinding
-- **Education** - Campus navigation for students
-- **Transportation** - Airport and station guidance
+### Where it applies:
+- Fashion e-commerce
+- D2C streetwear brands
+- Influencer merchandise
+- Custom apparel
+- AR retail innovations
+
+### Product Potential:
+- Standalone AR brand
+- SaaS try-on widget
+- White-label AR solution
+- API for online stores
 
 ---
 
 ## 🤝 Contributing
 
-We welcome contributions from the community! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+We welcome contributions!
 
-### Development Setup
+### Steps:
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to branch (`git push origin feature/amazing-feature`)
+2. Create a feature branch
+3. Commit your changes
+4. Push to GitHub
 5. Open a Pull Request
 
-### Code Style
-- Follow Unity C# coding conventions
-- Use meaningful variable and function names
-- Comment complex algorithms and business logic
-- Write unit tests for core functionality
+### Example:
+```bash
+git checkout -b feature/improvement
+git commit -m "Added new feature"
+git push origin feature/improvement
+```
 
 ---
 
@@ -192,44 +210,42 @@ We welcome contributions from the community! Please see our [Contributing Guidel
 
 | Metric | Target | Current |
 |--------|--------|---------|
-| Positioning Accuracy | <1m | 0.8m |
-| Frame Rate | 30+ FPS | 35 FPS |
-| Battery Life | 2+ hours | 1.8 hours |
-| App Size | <200MB | 180MB |
+| AR FPS | 24–30 FPS | WIP |
+| Measurement Accuracy | ~90% | WIP |
+| App Size | <20MB | ✔️ |
+| Load Time | <3 seconds | ⚠️ Needs Optimization |
 
 ---
 
 ## 🔐 Security & Privacy
 
-- **Local Processing** - All SLAM computations happen on-device
-- **Encrypted Communication** - TLS 1.3 for all cloud interactions
-- **Data Minimization** - Only essential location data is collected
-- **GDPR Compliant** - Full user control over personal data
+- All camera processing happens locally
+- No biometric data stored
+- No video/image uploaded to server
+- HTTPS recommended
+- GDPR-friendly architecture
 
 ---
 
 ## 📞 Support & Contact
 
-- **Email**: madasu.praneeth464@gmail.com
+- **Email**: darshan.kushal321@gmail.com
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Licensed under the MIT License.
 
 ---
 
 ## 🙏 Acknowledgments
 
-- Unity Technologies for AR Foundation
-- Google for ARCore
-- Apple for ARKit
-- Open source SLAM community
-- Beta testers and early adopters
+- MediaPipe (Google)
+- TensorFlow.js
+- React Community
+- Early Testers
 
 ---
 
-**Made with ❤️ by the Step In Team**
-
-*Bringing the future of indoor navigation to life, one step at a time.*
+**Made with ❤️ for the future of online fashion**
